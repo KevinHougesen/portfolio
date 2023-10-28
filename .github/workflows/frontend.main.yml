@@ -25,7 +25,7 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-           az cdn endpoint purge --content-paths  "/*" --profile-name "azurekevincloud" --name "azurekevincloud" --resource-group "getvisitorcounts"
+           az cdn endpoint purge --content-paths  "/*" --profile-name "azureportfoliocloud" --name "azureportfoliocloud" --resource-group "getvisitorcounts"
 
   # Azure logout
     - name: logout
