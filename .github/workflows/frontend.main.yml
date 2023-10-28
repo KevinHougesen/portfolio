@@ -19,11 +19,13 @@ jobs:
     - name: Upload to blob storage
       uses: azure/CLI@v1
       with:
+        azcliversion: 2.53.1
         inlineScript: |
             az storage blob upload-batch --account-name getvisitorcounts --auth-mode key -d '$web' -s frontend/
     - name: Purge CDN endpoint
       uses: azure/CLI@v1
       with:
+        azcliversion: 2.53.1
         inlineScript: |
            az cdn endpoint purge --content-paths  "/*" --profile-name "azureportfoliocloud" --name "azureportfoliocloud" --resource-group "getvisitorcounts"
 
@@ -31,4 +33,3 @@ jobs:
     - name: logout
       run: |
             az logout
-      if: always()
