@@ -1,4 +1,4 @@
-name: deploy_front
+name: deploy_fronts
 # Deploys when push is made from frontend folder
 
 on:
@@ -21,7 +21,7 @@ jobs:
       with:
         azcliversion: 2.53.1
         inlineScript: |
-            az storage blob upload-batch --account-name getvisitorcounts --auth-mode key -d '$web' -s frontend/
+            az storage blob upload-batch --account-name getvisitorcounts --auth-mode key -d '$web' -s . --overwrite
     - name: Purge CDN endpoint
       uses: azure/CLI@v1
       with:
