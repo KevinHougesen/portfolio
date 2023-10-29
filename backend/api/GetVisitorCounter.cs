@@ -29,11 +29,11 @@ namespace Company.Function
                 Id = "1", 
                 PartitionKey = "1"
                 )] Counter counter,
-                
+
             FunctionContext Context
             )
         {
-            // Function starts here
+            // Function begins here
             var logger = Context.GetLogger("GetVisitorCounter");
             logger.LogInformation("C# HTTP trigger function processed a request.");
 
