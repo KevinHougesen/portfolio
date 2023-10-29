@@ -7,7 +7,7 @@ on:
         - 'backend/**'
 
 env:
-  AZURE_WEBAPP_NAME: GetVisitorCounter    # set this to your application's name
+  AZURE_WEBAPP_NAME: GetVisitorCounts    # set this to your application's name
   AZURE_WEBAPP_PACKAGE_PATH: 'backend'      # set this to the path to your web app project, defaults to the repository root
   NUGET_VERSION: '7.0'           # set this to the dot net version to use
 
