@@ -1,0 +1,12 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "dotnet-isolated",
+    "CosmosDbConnectionString": "AccountEndpoint=https://azure-ksh-portfolio.documents.azure.com:443/;AccountKey=p6Th0gfd5QcwKtJzC1EU9PhAn8NW9B31X6boVYKb21rayKFGz7CfVXUVGTB9EC2k06nOpQOzurDsACDbNsflsQ==;"
+  },
+  "Host":
+  {
+    "CORS":"*"
+  }
+}

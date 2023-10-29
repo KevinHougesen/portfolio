@@ -1,0 +1,184 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/kevinhougesen/Desktop/portfolio/backend/tests/tests.csproj": {}
+  },
+  "projects": {
+    "/Users/kevinhougesen/Desktop/portfolio/backend/api/api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/kevinhougesen/Desktop/portfolio/backend/api/api.csproj",
+        "projectName": "api",
+        "projectPath": "/Users/kevinhougesen/Desktop/portfolio/backend/api/api.csproj",
+        "packagesPath": "/Users/kevinhougesen/.nuget/packages/",
+        "outputPath": "/Users/kevinhougesen/Desktop/portfolio/backend/api/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/Users/kevinhougesen/Library/Application Support/Godot/mono/GodotNuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/kevinhougesen/.nuget/NuGet/NuGet.Config",
+          "/Users/kevinhougesen/.nuget/NuGet/config/Godot.Offline.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc.WebApiCompatShim": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Azure.Cosmos": {
+              "target": "Package",
+              "version": "[3.36.0, )"
+            },
+            "Microsoft.Azure.Functions.Worker": {
+              "target": "Package",
+              "version": "[1.19.0, )"
+            },
+            "Microsoft.Azure.Functions.Worker.Extensions.CosmosDB": {
+              "target": "Package",
+              "version": "[4.4.2, )"
+            },
+            "Microsoft.Azure.Functions.Worker.Extensions.Http": {
+              "target": "Package",
+              "version": "[3.0.13, )"
+            },
+            "Microsoft.Azure.Functions.Worker.Sdk": {
+              "target": "Package",
+              "version": "[1.15.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/kevinhougesen/Desktop/portfolio/backend/tests/tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/kevinhougesen/Desktop/portfolio/backend/tests/tests.csproj",
+        "projectName": "tests",
+        "projectPath": "/Users/kevinhougesen/Desktop/portfolio/backend/tests/tests.csproj",
+        "packagesPath": "/Users/kevinhougesen/.nuget/packages/",
+        "outputPath": "/Users/kevinhougesen/Desktop/portfolio/backend/tests/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/Users/kevinhougesen/Library/Application Support/Godot/mono/GodotNuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/kevinhougesen/.nuget/NuGet/NuGet.Config",
+          "/Users/kevinhougesen/.nuget/NuGet/config/Godot.Offline.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/kevinhougesen/Desktop/portfolio/backend/api/api.csproj": {
+                "projectPath": "/Users/kevinhougesen/Desktop/portfolio/backend/api/api.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Azure.Functions.Worker.Extensions.Http.AspNetCore": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.5.0, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.2, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.302/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
