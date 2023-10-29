@@ -16,36 +16,41 @@ namespace Company.Function
 
         [Function("GetVisitorCounter")]
         public static async Task<HttpResponseData> RunAsync(
-            [HttpTrigger(AuthorizationLevel.Function, "get", "post")] HttpRequestData req,
-            [CosmosDBInput(databaseName:"AzurePortfolio", containerName:"Counter", Connection = "CosmosDbConnectionString", Id = "1", PartitionKey = "1")] 
-            Counter counter,
+            [HttpTrigger(
+                AuthorizationLevel.Function, 
+                "get", 
+                "post"
+                )] HttpRequestData req,
+
+            [CosmosDBInput(
+                databaseName:"AzurePortfolio", 
+                containerName:"Counter", 
+                Connection = "CosmosDbConnectionString", 
+                Id = "1", 
+                PartitionKey = "1"
+                )] Counter counter,
+                
             FunctionContext Context
             )
         {
-            // logger LOL
+            // Function starts here
             var logger = Context.GetLogger("GetVisitorCounter");
-
             logger.LogInformation("C# HTTP trigger function processed a request.");
-            
-            int visitorCount = counter.Count;
 
+            // Increments visitor counter
             counter.Count++;
 
+            // Updates the Cosmos DB
             await OutCounter.UpdateDocumentAsync(counter);
 
+            // Create Json Object for API
             var jsonToReturn = JsonConvert.SerializeObject(counter);
-            //JsonConvert.SerializeObject(new { visitorCount }
 
-            // Return the visitor count to the user.
-
+            // Returns the new visitor count to the user.
             var response = req.CreateResponse(HttpStatusCode.OK);
             response.Headers.Add("Content-Type", "text/plain; charset=utf-8");
             response.WriteString(jsonToReturn);
             return response;
-
-
-        // Retrieve the counter from Cosmos DB
-        
     }
 }
 }
