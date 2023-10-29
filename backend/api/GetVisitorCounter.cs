@@ -19,10 +19,12 @@ namespace Company.Function
             [HttpTrigger(AuthorizationLevel.Function, "get", "post")] HttpRequestData req,
             [CosmosDBInput(databaseName:"AzurePortfolio", containerName:"Counter", Connection = "CosmosDbConnectionString", Id = "1", PartitionKey = "1")] 
             Counter counter,
-            ILogger Context
+            FunctionContext Context
             )
         {
-            var logger = Context;
+            // logger LOL
+            var logger = Context.GetLogger("GetVisitorCounter");
+
             logger.LogInformation("C# HTTP trigger function processed a request.");
             
             int visitorCount = counter.Count;
